@@ -10,7 +10,24 @@ $dados = $conexao->query("SELECT * FROM tb_produto")->fetchAll(PDO::FETCH_NAMED)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <script type="text/javascript">
+        window.onload = function() {
+            window.print();
+        }
+    </script>
+    <style type="text/css" media="print">
+        @media print {
+            @page {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            body {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+        }
+    </style></head>
 
 <body>
     <form action="cad_insumo.php" method="post">
